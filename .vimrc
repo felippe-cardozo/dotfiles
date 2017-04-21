@@ -54,7 +54,15 @@ endif
 
 "Plug
 call plug#begin('~/.config/nvim/plugged')
+Plug 'guns/vim-clojure-highlight'
+Plug 'chriskempson/base16-vim'
+Plug 'clojure-vim/async-clj-omni'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-repeat'
 Plug 'mattn/emmet-vim'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -73,6 +81,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mejorf/vim-railscasts-theme'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -97,14 +106,15 @@ set ruler
 set cursorline
 set expandtab
 set laststatus=2
-set statusline=%f\ %p%%%=\(#%n\)%m "filename all the time
+set statusline=%f\ %y\ %m%=\%=\ %l\,%c%=\%p%%(#%n\) 
 set t_Co=256
-colorscheme railscasts
+colorscheme badwolf
 set clipboard+=unnamedplus
 hi ColorColumn guibg=#222222
 "call matchadd('ColorColumn', '\%81v', 100)
 set colorcolumn=81
-hi StatusLine guifg=#87af5f guibg=#202020
+" hi StatusLine guibg=#87af5f guifg=#202020 gui=bold
+hi StatusLine gui=bold
 
 "ag silversearcher
 if executable('ag')
@@ -189,10 +199,16 @@ autocmd! BufWritePost,BufEnter * Neomake
 "open neomake log
 nmap <leader>L :lopen<cr> 
 
-"surround
-"map <leader>y ysiw
-"map <leader>ch cs
-"map <leader>d ds
-
 "deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
+
+ " if version >= 700
+ "   au InsertEnter * hi StatusLine guifg=#202020 guibg=#87cefa gui=bold
+ "   au InsertLeave * hi StatusLine gui=bold guifg=#202020 guibg=#87af5f
+ " endif
+"
+"Rainbow
+au BufEnter *.clj RainbowParentheses
+
