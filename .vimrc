@@ -54,21 +54,19 @@ endif
 
 "Plug
 call plug#begin('~/.config/nvim/plugged')
-Plug 'guns/vim-clojure-highlight'
-Plug 'chriskempson/base16-vim'
-Plug 'clojure-vim/async-clj-omni'
+Plug 'jiangmiao/auto-pairs'
+Plug 'zchee/deoplete-jedi', {'for': ['python']}
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'mattn/emmet-vim'
-Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static', {'for': ['clojure']}
+Plug 'tpope/vim-fireplace', {'for': ['clojure']}
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
 Plug 'neomake/neomake'
-Plug 'godlygeek/csapprox'
 Plug 'morhetz/gruvbox'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
@@ -81,8 +79,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'mejorf/vim-railscasts-theme'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'tpope/vim-commentary'
+Plug 'LaTeX-Box-Team/LaTeX-Box', {'for': ['latex']}
 call plug#end()
 
 " The following are commented out as they cause vim to behave a lot
@@ -108,10 +106,12 @@ set expandtab
 set laststatus=2
 set statusline=%f\ %y\ %m%=\%=\ %l\,%c%=\%p%%(#%n\) 
 set t_Co=256
-colorscheme badwolf
+colorscheme zen
 set clipboard+=unnamedplus
-hi ColorColumn guibg=#222222
-"call matchadd('ColorColumn', '\%81v', 100)
+" hi ColorColumn guibg=#3a3a3a
+hi ColorColumn guibg=#333333
+" hi SignColumn guibg=#222222
+call matchadd('ColorColumn', '\%81v', 100)
 set colorcolumn=81
 " hi StatusLine guibg=#87af5f guifg=#202020 gui=bold
 hi StatusLine gui=bold
@@ -139,6 +139,7 @@ cmap <C-Space> <Esc>
 nmap <leader>w :w<cr>
 nmap <leader>q :q<cr>
 nmap <leader>s :so %<cr>
+nmap <leader>o a<cr><esc>
 set pastetoggle=<F3>
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -212,3 +213,7 @@ let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 "Rainbow
 au BufEnter *.clj RainbowParentheses
 
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+"supertab top to bottom
+let g:SuperTabDefaultCompletionType = "<c-n>"

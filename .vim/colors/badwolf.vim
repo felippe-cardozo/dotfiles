@@ -197,7 +197,7 @@ call s:HL('TabLine', 'plain', s:tabline, 'none')
 call s:HL('TabLineFill', 'plain', s:tabline, 'none')
 call s:HL('TabLineSel', 'coal', 'tardis', 'none')
 
-call s:HL('MatchParen', 'dalespale', 'darkgravel', 'bold')
+call s:HL('MatchParen', 'dalespale', 'tardis', 'bold')
 
 call s:HL('NonText',    'deepgravel', 'bg')
 call s:HL('SpecialKey', 'deepgravel', 'bg')
