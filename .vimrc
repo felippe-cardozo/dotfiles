@@ -67,7 +67,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugs' }
 Plug 'neomake/neomake'
-Plug 'morhetz/gruvbox'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
@@ -81,6 +80,10 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-commentary'
 Plug 'LaTeX-Box-Team/LaTeX-Box', {'for': ['latex']}
+Plug 'junegunn/rainbow_parentheses.vim'
+" Plug 'lifepillar/vim-solarized8'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'strogonoff/vim-coffee-script'
 call plug#end()
 
 " The following are commented out as they cause vim to behave a lot
@@ -105,14 +108,14 @@ set cursorline
 set expandtab
 set laststatus=2
 set statusline=%f\ %y\ %m%=\%=\ %l\,%c%=\%p%%(#%n\) 
-set t_Co=256
-colorscheme zen
+set background=dark
+colorscheme hybrid
+hi MatchParen guifg=#888888 guibg=#222222
 set clipboard+=unnamedplus
-" hi ColorColumn guibg=#3a3a3a
 hi ColorColumn guibg=#333333
 " hi SignColumn guibg=#222222
-call matchadd('ColorColumn', '\%81v', 100)
-set colorcolumn=81
+call matchadd('ColorColumn', '\%101v', 100)
+set colorcolumn=101
 " hi StatusLine guibg=#87af5f guifg=#202020 gui=bold
 hi StatusLine gui=bold
 
@@ -173,6 +176,7 @@ let g:fzf_buffers_jump = 1
 " - down / up / left / right
 let g:fzf_layout = { 'down': '~40%' }
 nnoremap <leader>f :FZF --reverse<cr>
+nmap <leader>c :Tags<cr>
 nmap <leader>b :Buffers<cr>
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],

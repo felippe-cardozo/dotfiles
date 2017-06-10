@@ -100,65 +100,65 @@ if exists("syntax_on")
 endif
 let g:colors_name="zen"
 
-hi Boolean         guifg=#dca3a3
-hi Character       guifg=#dca3a3 gui=none
+hi Boolean         guifg=#dca3a3 gui=bold
+hi Character       guifg=#dca3a3 gui=bold
 hi Comment         guifg=#7f9f7f gui=italic
-hi Conditional     guifg=#f0dfaf gui=none
-hi Constant        guifg=#dca3a3 gui=none
-hi Cursor          guifg=#000d18 guibg=#8faf9f gui=none
+hi Conditional     guifg=#f0dfaf gui=bold
+hi Constant        guifg=#dca3a3 gui=bold
+hi Cursor          guifg=#000d18 guibg=#8faf9f gui=bold
 hi Debug           guifg=#bca3a3 gui=none
 hi Define          guifg=#ffcfaf gui=none
 hi Delimiter       guifg=#8f8f8f
 hi DiffAdd         guifg=#709080 guibg=#313c36 gui=none
 hi DiffChange      guibg=#333333
 hi DiffDelete      guifg=#333333 guibg=#464646
-hi DiffText        guifg=#ecbcbc guibg=#41363c gui=none
-hi Directory       guifg=#dcdccc gui=none
-hi ErrorMsg        guifg=#80d4aa guibg=#2f2f2f gui=none
-hi Exception       guifg=#c3bf9f gui=none
-hi Float           guifg=#c0bed1
+hi DiffText        guifg=#ecbcbc guibg=#41363c gui=bold
+hi Directory       guifg=#dcdccc gui=bold
+hi ErrorMsg        guifg=#80d4aa guibg=#2f2f2f gui=bold
+hi Exception       guifg=#c3bf9f gui=bold
+hi Float           guifg=#c0bed1 gui=bold
 hi FoldColumn      guifg=#93b3a3 guibg=#3f4040
 hi Folded          guifg=#93b3a3 guibg=#3f4040
 hi Function        guifg=#efef8f
 hi Identifier      guifg=#efdcbc
-hi IncSearch       guibg=#f8f893 guifg=#385f38
-hi Keyword         guifg=#f0dfaf gui=none
+hi IncSearch       guibg=#f8f893 guifg=#385f38 gui=bold
+hi Keyword         guifg=#f0dfaf gui=bold
 hi Label           guifg=#dfcfaf gui=underline
 hi LineNr          guifg=#9fafaf guibg=#3f3f3f
 hi Macro           guifg=#ffcfaf gui=none
-hi ModeMsg         guifg=#ffcfaf gui=none
-hi MoreMsg         guifg=#ffffff gui=none
-hi Number          guifg=#8cd0d3
+hi ModeMsg         guifg=#ffcfaf gui=bold
+hi MoreMsg         guifg=#ffffff gui=bold
+hi Number          guifg=#8cd0d3 gui=bold
 hi Operator        guifg=#f0efd0
-hi PreCondit       guifg=#dfaf8f gui=none
+hi PreCondit       guifg=#dfaf8f gui=bold
 hi PreProc         guifg=#ffcfaf gui=none
-hi Question        guifg=#ffffff gui=none
+hi Question        guifg=#ffffff gui=bold
 hi Repeat          guifg=#ffd7a7 gui=none
-hi Search          guifg=#ffffe0 guibg=#284f28
-hi SpecialChar     guifg=#dca3a3 gui=none
-hi SpecialComment  guifg=#82a282 gui=none
+hi Search          guifg=#ffffe0 guibg=#284f28 gui=bold
+hi SpecialChar     guifg=#dca3a3 gui=bold
+hi SpecialComment  guifg=#82a282 gui=bold
 hi Special         guifg=#cfbfaf
 hi SpecialKey      guifg=#9ece9e
-hi Statement       guifg=#e3ceab gui=none
+hi Statement       guifg=#e3ceab gui=bold
 " hi StatusLine      guibg=#555555 guifg=#ccdc90 gui=bold
-hi StatusLine      guibg=#555555 guifg=#222222 gui=bold
-hi StatusLineNC    guifg=#2e3330 guibg=#88b090
+hi StatusLine      guibg=#88b090 guifg=#222222 gui=bold
+hi StatusLineNC    guifg=#2e3330 guibg=#555555 gui=bold
 hi StorageClass    guifg=#c3bf9f gui=none
 hi String          guifg=#cc9393
 hi Structure       guifg=#efefaf gui=none
-hi Tag             guifg=#e89393 gui=none
+hi Tag             guifg=#e89393 gui=bold
 hi Title           guifg=#efefef gui=none
-hi Todo            guifg=#dfdfdf guibg=bg gui=none
-hi Typedef         guifg=#dfe4cf gui=none
+hi Todo            guifg=#dfdfdf guibg=bg gui=bold
+hi Typedef         guifg=#dfe4cf gui=bold
 hi Type            guifg=#dfdfbf gui=none
 hi Underlined      guifg=#dcdccc gui=underline
 hi VertSplit       guifg=#2e3330 guibg=#688060
 hi VisualNOS       guifg=#333333 guibg=#f18c96 gui=none,underline
-hi WarningMsg      guifg=#ffffff guibg=#333333 gui=none
+hi WarningMsg      guifg=#ffffff guibg=#333333 gui=bold
 hi WildMenu        guibg=#2c302d guifg=#cbecd0 gui=underline
 
 hi SpellBad   guisp=#bc6c4c guifg=#dc8c6c
-hi SpellCap   guisp=#6c6c9c guifg=#8c8cbc
+hi SpellCap   guisp=#6c6c9c guifg=#8c8cbc gui=bold
 hi SpellRare  guisp=#bc6c9c guifg=#bc8cbc
 hi SpellLocal guisp=#7cac7c guifg=#9ccc9c
 
@@ -289,10 +289,10 @@ if exists("g:zenburn_high_Contrast")
     hi Normal          guifg=#dcdccc guibg=#1f1f1f
     hi CursorLine      guibg=#121212 gui=none
     hi Pmenu           guibg=#242424 guifg=#ccccbc
-    hi PMenuSel        guibg=#353a37 guifg=#ccdc90 gui=none
+    hi PMenuSel        guibg=#353a37 guifg=#ccdc90 gui=bold
     hi PmenuSbar       guibg=#2e3330 guifg=#000000
     hi PMenuThumb      guibg=#a0afa0 guifg=#040404
-    hi MatchParen      guifg=#f0f0c0 guibg=#383838 gui=none
+    hi MatchParen      guifg=#f0f0c0 guibg=#383838 gui=bold
     hi SignColumn      guifg=#9fafaf guibg=#1f1f1f gui=none
     hi TabLineFill     guifg=#cfcfaf guibg=#181818 gui=none
     hi TabLineSel      guifg=#efefef guibg=#1c1c1b gui=none
@@ -305,11 +305,11 @@ else
     hi Normal          guifg=#dcdccc guibg=#3f3f3f
     hi CursorLine      guibg=#434443
     hi Pmenu           guibg=#2c2e2e guifg=#9f9f9f
-    hi PMenuSel        guibg=#242424 guifg=#d0d0a0 gui=none
+    hi PMenuSel        guibg=#242424 guifg=#d0d0a0 gui=bold
     hi PmenuSbar       guibg=#2e3330 guifg=#000000
     hi PMenuThumb      guibg=#a0afa0 guifg=#040404
-    hi MatchParen      guifg=#b2b2a0 guibg=#2e2e2e gui=none
-    hi SignColumn      guifg=#9fafaf guibg=#343434 gui=none
+    hi MatchParen      guifg=#b2b2a0 guibg=#2e2e2e gui=bold
+    hi SignColumn      guifg=#9fafaf guibg=#3f3f3f gui=none
     hi TabLineFill     guifg=#cfcfaf guibg=#353535 gui=none
     hi TabLineSel      guifg=#efefef guibg=#3a3a39 gui=none
     hi TabLine         guifg=#b6bf98 guibg=#353535 gui=none

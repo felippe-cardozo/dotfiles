@@ -1,1 +1,1 @@
-/home/mejorf/dotfiles/.vimrc
+/home/f/dotfiles/.vimrc

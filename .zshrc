@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/mejorf/.oh-my-zsh
+  export ZSH=/home/f/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -90,6 +90,6 @@ alias vi=nvim
 alias vim=nvim
 alias vic='nvim ~/dotfiles/.vimrc'
 alias rg='~/Downloads/ripgrep-0.5.0-x86_64-unknown-linux-musl/rg'
-export FZF_DEFAULT_COMMAND='~/Downloads/ripgrep-0.5.0-x86_64-unknown-linux-musl/rg --files'
+export FZF_DEFAULT_COMMAND='~/ripgrep-0.5.0-x86_64-unknown-linux-musl/rg --files'
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
