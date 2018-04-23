@@ -11,6 +11,7 @@ set expandtab
 set encoding=utf-8
 set statusline=%f\ %y\ %M%=\%=\ %l\,%c%=\%p%%(#%n\) 
 set laststatus=2
+set nu
 set termguicolors
 set term=screen-256color
 set clipboard=unnamedplus
