@@ -14,12 +14,12 @@ set laststatus=2
 set nu
 set termguicolors
 set term=screen-256color
-set clipboard=unnamedplus
-colorscheme solarized8_dark_flat
+set clipboard=unnamed
+colorscheme one
+set background=dark
 if &term =~# '^screen'
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-        set t_ZH=^[[3m
-        set t_ZR=^[[23m]]]]
 endif
 imap jj <ESC>
+map , <leader>

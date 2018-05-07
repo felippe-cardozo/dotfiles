@@ -50,6 +50,7 @@ nnoremap <leader>f :call fzf#run(fzf#wrap({
                         \'source': 'git ls-files --exclude-standard --others --cached', 'options': '--reverse'}))<cr>
 nmap <leader>c :Tags<cr>
 nmap <leader>b :Buffers<cr>
+nmap <leader>a :Ag<cr>
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
