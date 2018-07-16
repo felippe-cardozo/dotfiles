@@ -15,11 +15,13 @@ set nu
 set termguicolors
 set term=screen-256color
 set clipboard=unnamed
-colorscheme one
-set background=dark
+colorscheme custom_sol
+hi StatusLine ctermfg=242 ctermbg=254 guifg=#586e75 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi StatusLineNC ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 if &term =~# '^screen'
         let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
         let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 imap jj <ESC>
 map , <leader>
+set cc=80
