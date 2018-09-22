@@ -1,6 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
@@ -11,9 +10,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fireplace', {'for': ['clojure']}
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -27,12 +26,46 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0rp/ale'
 Plug 'luochen1990/rainbow'
-Plug 'guns/jellyx.vim'
-Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree'
+Plug 'elixir-editors/vim-elixir'
+Plug 'sheerun/vim-polyglot' " watch for performance issues
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'sonph/onehalf'
+Plug 'itchyny/lightline.vim'
+Plug 'KeitaNakamura/neodark.vim'
+Plug 'kaicataldo/material.vim'
+Plug 'rakr/vim-one'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " PLUGINS CONFIG
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'component_function': {
+      \   'filename': 'LightLineFilename',
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'active': {
+      \    'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
+      \    'right': [['lineinfo'], ['percent'], ['encoding', 'filetype']]
+      \ }
+      \ }
+
+let g:lightline.tabline = {
+		    \ 'left': [ [ 'tabs' ] ],
+		    \ 'right': [ [ '' ] ] }
+
+let g:lightline.tab = {
+		    \ 'active': [ 'filename', 'modified' ],
+		    \ }
+
+function! LightLineFilename()
+  return expand('%')
+endfunction
 
 "rainbow
 let g:rainbow_active = 1
@@ -85,4 +118,3 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
 nmap <leader>/ :Ag<Space>
-
