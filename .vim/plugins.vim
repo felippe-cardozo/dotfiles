@@ -10,6 +10,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-eunuch'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -25,51 +26,16 @@ Plug 'xolox/vim-misc'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0rp/ale'
-Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdtree'
 Plug 'elixir-editors/vim-elixir'
 Plug 'sheerun/vim-polyglot' " watch for performance issues
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'sonph/onehalf'
-Plug 'itchyny/lightline.vim'
-Plug 'KeitaNakamura/neodark.vim'
-Plug 'kaicataldo/material.vim'
+Plug 'jlanzarotta/bufexplorer'
 Plug 'rakr/vim-one'
-Plug 'arcticicestudio/nord-vim'
+Plug 'icymind/NeoSolarized'
 call plug#end()
 
 " PLUGINS CONFIG
-
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ 'component_function': {
-      \   'filename': 'LightLineFilename',
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ 'active': {
-      \    'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
-      \    'right': [['lineinfo'], ['percent'], ['encoding', 'filetype']]
-      \ }
-      \ }
-
-let g:lightline.tabline = {
-		    \ 'left': [ [ 'tabs' ] ],
-		    \ 'right': [ [ '' ] ] }
-
-let g:lightline.tab = {
-		    \ 'active': [ 'filename', 'modified' ],
-		    \ }
-
-function! LightLineFilename()
-  return expand('%')
-endfunction
-
-"rainbow
-let g:rainbow_active = 1
-
 "fzf
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
@@ -85,21 +51,8 @@ nnoremap <leader>p :FZF --reverse<cr>
 nnoremap <leader>f :call fzf#run(fzf#wrap({
                         \'source': 'git ls-files --exclude-standard --others --cached', 'options': '--reverse'}))<cr>
 nmap <leader>c :Tags<cr>
-nmap <leader>b :Buffers<cr>
+nmap <leader>bb :Buffers<cr>
 nmap <leader>a :Ag<cr>
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
 
  "better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -118,3 +71,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
 nmap <leader>/ :Ag<Space>
+
+"buff maps
+nmap <leader>n :bn<cr>
+nmap <leader>p :bp<cr>
