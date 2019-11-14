@@ -29,13 +29,14 @@ Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'elixir-editors/vim-elixir'
 Plug 'sheerun/vim-polyglot' " watch for performance issues
-Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'rakr/vim-one'
 Plug 'icymind/NeoSolarized'
 call plug#end()
 
 " PLUGINS CONFIG
+" dash
+
+let g:dash_activate=1
 "fzf
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
