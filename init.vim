@@ -14,10 +14,9 @@ syntax enable
 set termguicolors
 set clipboard=unnamed
 let g:enable_bold_font = 1
-let g:neosolarized_contrast = "low"
-let g:neosolarized_bold = 1
-set background=dark
-colorscheme NeoSolarized
+set background=light
+colorscheme solarized8
+hi SpellCap NONE
 map , <leader>
 set cc=80
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
