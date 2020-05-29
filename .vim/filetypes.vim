@@ -35,4 +35,4 @@ endif
 
 "set html as django html
 au BufNewFile,BufRead *.html set filetype=htmldjango
-
+set lispwords+=against-background,fact,facts,flow,future-fact,future-facts,deftest,defflow
