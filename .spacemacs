@@ -44,7 +44,6 @@ This function should only modify configuration layer settings."
      emacs-lisp
      (clojure :variables
               clojure-enable-linters 'clj-kondo)
-     nu-clojure
      git
      helm
      ;; lsp
