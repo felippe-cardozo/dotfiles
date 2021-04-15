@@ -12,14 +12,15 @@ set laststatus=2
 set nu
 syntax enable
 set termguicolors
-set clipboard=unnamed
+set clipboard+=unnamedplus
 " reset cursor to old default
 set guicursor=
 let g:enable_bold_font = 1
-set background=light
+set background=dark
 colorscheme solarized8_flat
 hi SpellCap NONE
-map , <leader>
+nnoremap <SPACE> <Nop>
+map <SPACE> <leader>
 set cc=80
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
@@ -31,3 +32,4 @@ if has('terminal')
 endif
 noremap <leader>z <c-w>_ \| <c-w>\|
 noremap <leader>Z <c-w>=
+nnoremap <Leader>w <C-w>
