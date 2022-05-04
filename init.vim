@@ -16,7 +16,7 @@ set clipboard+=unnamedplus
 " reset cursor to old default
 set guicursor=
 let g:enable_bold_font = 1
-set background=dark
+set background=light
 colorscheme solarized8_flat
 hi SpellCap NONE
 nnoremap <SPACE> <Nop>
@@ -33,3 +33,4 @@ endif
 noremap <leader>z <c-w>_ \| <c-w>\|
 noremap <leader>Z <c-w>=
 nnoremap <Leader>w <C-w>
+nnoremap <leader><Tab> <C-^>
